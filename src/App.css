@@ -5,7 +5,3 @@
 .date-picker-wrapper {
   margin: 50px 0 90px 0;
 }
-
-svg.react-daterange-picker__clear-button__icon.react-daterange-picker__button__icon {
-  display: none !important;
-}
