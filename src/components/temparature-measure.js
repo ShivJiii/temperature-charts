@@ -4,7 +4,12 @@ import HighchartsReact from "highcharts-react-official";
 import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 
 const TemperatureMeasure = () => {
+
   const [value, onChange] = useState([new Date(), new Date()]);
+
+  const onChangeDate = (val) => {
+    onChange(val);
+  };
 
   const options = {
     title: {
@@ -66,7 +71,7 @@ const TemperatureMeasure = () => {
   return (
     <Fragment>
       <div className="date-picker-wrapper">
-        <DateRangePicker onChange={onChange} value={value} />
+        <DateRangePicker onChange={onChangeDate} value={value} />
       </div>
       <HighchartsReact highcharts={Highcharts} options={options} />
     </Fragment>
