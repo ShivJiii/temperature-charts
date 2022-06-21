@@ -15,13 +15,9 @@ const TemperatureMeasure = () => {
 
   const diffTime = Math.abs(value[0] - value[1]);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  console.log({ diffDays });
+
   const onChangeDate = (val) => {
-    if(month !== 0){
-      return alert('Please select the date between a month !!!')
-    } else{
       onChange(val);
-    }
   };
   useEffect(() => {
     let temp = [];
