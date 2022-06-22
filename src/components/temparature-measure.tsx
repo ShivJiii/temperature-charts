@@ -4,21 +4,21 @@ import HighchartsReact from "highcharts-react-official";
 import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 
 const TemperatureMeasure = () => {
-  const year = new Date().getFullYear();
-  const month = new Date().getMonth();
-  const day = new Date().getDate();
+  const year: number = new Date().getFullYear();
+  const month: any = new Date().getMonth();
+  const day: any = new Date().getDate();
   const [value, onChange] = useState([
     new Date(),
     new Date(year, month, day + 7),
   ]);
   const [temprature, setTemprature] = useState([]);
   const diffTime: any = Math.abs(value[0].getTime() - value[1].getTime());
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const diffDays: number = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   const onChangeDate = (val: any) => {
     onChange(val);
   };
   useEffect(() => {
-    let temp = [];
+    let temp: any = [];
     for (let i = 0; i < diffDays; i++) {
       temp.push(Math.floor(Math.random() * 55) + 1);
     }

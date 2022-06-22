@@ -1,5 +1,5 @@
-import TemperatureMeasure from "./components/temparature-measure";
 import * as React from "react";
+import TemperatureMeasure from "./components/temparature-measure";
 import "./App.css";
 
 const App = () => {
